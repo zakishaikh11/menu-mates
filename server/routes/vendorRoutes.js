@@ -47,7 +47,7 @@ router.post('/add-vendor', upload.single('image'), async (req, res) => {
   
       const imagePath = `/uploads/${req.file.filename}`;
   
-      const qrCodeUrl = `http://localhost:3000/${name}/menu`;
+      const qrCodeUrl = `https://menu-mates.vercel.app/${name}/menu`;
       const qrCode = await QRCode.toDataURL(qrCodeUrl);
   
       const vendor = new Vendor({
